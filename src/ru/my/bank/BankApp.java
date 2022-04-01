@@ -55,7 +55,7 @@ public class BankApp {
             switch (clientOption) {
                 case 1 -> {
                     System.out.println("1: Открыть банковский счёт");
-                    openBankAccont(newClient, clientBase, isClient, scanner);
+                    openBankAccount(newClient, clientBase, isClient, scanner);
                     /*for (Map.Entry<Client, Set<Long>> itr : clientBase.entrySet())
                     {
                         System.out.println(itr.getKey().toString());
@@ -90,7 +90,7 @@ public class BankApp {
         scanner.close();
     }
 
-    private static void openBankAccont(Client newClient, Map<Client, Set<Long>> clientBase, boolean isClient, Scanner scanner) {
+    private static void openBankAccount(Client newClient, Map<Client, Set<Long>> clientBase, boolean isClient, Scanner scanner) {
         long passportNumber;
         int passportSeries;
         BankAccount bankAccount;
