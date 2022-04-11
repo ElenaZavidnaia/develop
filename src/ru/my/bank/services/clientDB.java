@@ -39,19 +39,3 @@ public class clientDB {
     }
 
 }
-
-/*
-interface ClientServices{
-
-    List<Account> account = new ArrayList<>();
-}
-
-public class ClientServices {
-    private Map<HashSet<Client>, List<Long>> base = new HashMap<>();
-
-    public void addUser(HashSet<Client> client, List<Long> account) {
-        this.base.put(client, account);
-
-    }
-
-}*/
