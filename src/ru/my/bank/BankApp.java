@@ -63,10 +63,10 @@ public class BankApp {
                     */
                     System.out.println(newClient);
                     Iterator<Long> itr = clientBase.get(newClient).iterator();
-                    while (itr.hasNext())
+                    do
                     {
                         System.out.println("Номер счёта :№" + itr.next().toString());
-                    }
+                    }while (itr.hasNext());
                 }
                 case 2 -> {
                     System.out.println("2: Оформить кредит");
