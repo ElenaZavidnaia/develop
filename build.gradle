@@ -1,0 +1,36 @@
+plugins {
+    id "java"
+//    id "org.gretty" version "4.0.1"
+    id "war"
+    id "application"
+}
+
+mainClassName = 'ru.my.bank.BankApp'
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.gradle:gradle-enterprise-maven-extension:1.14'
+}
+
+run {
+    standardInput = System.in
+}
+
+task('MyTask') {
+    println "MyTask"
+}
+
+archivesBaseName = 'BankApp'
+version '1.0'
+/*
+gretty {
+    httpPort = 8082
+    contextPath = '/'
+}
+*/
