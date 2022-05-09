@@ -2,6 +2,7 @@ package ru.my.bank.people;
 
 import ru.my.bank.services.Account;
 
+import java.io.Serializable;
 import java.util.*;
 
 public class Client extends Human {
@@ -22,15 +23,6 @@ public class Client extends Human {
         this.creditAgreementNumber = creditAgreementNumber;
     }
 
-    /*
-        public long getAccountNumber() {
-            return accountNumber;
-        }
-
-        public void setAccountNumber(long accountNumber) {
-            this.accountNumber = accountNumber;
-        }
-    */
     public int getPassportSeries() {
         return passportSeries;
     }
