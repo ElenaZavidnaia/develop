@@ -7,7 +7,7 @@ import ru.my.bank.builders.Builder;
 import ru.my.bank.people.Client;
 import ru.my.bank.people.CreditExpert;
 import ru.my.bank.services.BankAccount;
-import ru.my.bank.services.clientDB;
+import ru.my.bank.services.ClientDB;
 import ru.my.bank.services.Credit;
 import ru.my.bank.services.DebitCard;
 //import ru.my.bank.base.ClientBase;
@@ -24,7 +24,7 @@ public class BankApp {
         Credit credit;
         CreditExpert creditExpert;
         BankAccount bankAccount;
-        clientDB bankServices;
+        ClientDB bankServices;
         int indexNewClient;
 
         //Client newClient = Builder.buildClient("Иван", "Петров", 5005, 123456, "высокая", 1234);
@@ -34,7 +34,7 @@ public class BankApp {
 
         creditExpert = officeBank.getBankEmployee().getCreditExpert();
 
-        bankServices = new clientDB();
+        bankServices = new ClientDB();
         Map<Client, Set<Long>> clientBase = bankServices.getClientBase();
 
         boolean isClient = clientBase.containsKey(newClient);

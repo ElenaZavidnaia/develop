@@ -4,7 +4,7 @@ import ru.my.bank.people.Client;
 
 import java.util.*;
 
-public class clientDB {
+public class ClientDB {
 
     private Map<Client, Set<Long>> base;
 
