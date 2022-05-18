@@ -2,6 +2,7 @@ package ru.my.bank.people;
 
 import ru.my.bank.services.Account;
 
+import java.io.Serializable;
 import java.util.*;
 
 public class Client extends Human {
@@ -15,22 +16,13 @@ public class Client extends Human {
     public Client(String firstName, String lastName, int passportSeries, long passportNumber, String creditworthiness, long creditAgreementNumber) {
 
         super(firstName, lastName);
-//        this.accountNumber = accountNumber;
+//        this.accountNumber = accountNumber;f
         this.passportSeries = passportSeries;
         this.passportNumber = passportNumber;
         this.creditworthiness = creditworthiness;
         this.creditAgreementNumber = creditAgreementNumber;
     }
 
-    /*
-        public long getAccountNumber() {
-            return accountNumber;
-        }
-
-        public void setAccountNumber(long accountNumber) {
-            this.accountNumber = accountNumber;
-        }
-    */
     public int getPassportSeries() {
         return passportSeries;
     }
@@ -63,11 +55,17 @@ public class Client extends Human {
         this.creditAgreementNumber = creditAgreementNumber;
     }
 
+    public boolean isClient(Client newClient, Map<Client, Set<Long>> clientBase) {
+        return clientBase.containsKey(newClient);
+    }
+
     @Override
     public String toString() {
-        return super.toString() +
-                ", Серия паспорта :" + passportSeries +
-                ", Номер паспорта :" + passportNumber;
+        return super.toString()
+                + passportSeries + "; "
+                + passportNumber + "; "
+                + creditworthiness + "; "
+                + creditAgreementNumber + "; ";
     }
 
     @Override
